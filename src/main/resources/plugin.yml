@@ -1,0 +1,12 @@
+name: BananaPrisonCore
+version: ${project.version}
+main: me.drawethree.ultraprisoncore.BananaPrisonCore
+depend: [Vault, WorldGuard, WorldEdit]
+softdepend:
+  - PlaceholderAPI
+  - JetsPrisonMines
+  - MVdWPlaceholderAPI
+  - Multiverse-Core
+authors: [Drawethree]
+api-version: 1.13
+load: POSTWORLD

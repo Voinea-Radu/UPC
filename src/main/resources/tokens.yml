@@ -1,0 +1,42 @@
+messages:
+  not_enough_tokens: "&e&l(!) &eYou don't have enough tokens"
+  your_tokens: "&eYour Tokens: %tokens%"
+  other_tokens: "&e%player%'s Tokens: %tokens%"
+  your_blocks: "&eYour Blocks: %blocks%"
+  other_blocks: "&e%player%'s Blocks: %blocks%"
+  withdraw_successful: "&aYou have withdrawn &e%value%x %amount% Tokens!"
+  admin_set_tokens: "&aSuccessfuly set &e%player%'s &atokens to &e%tokens%."
+  admin_give_tokens: "&aSuccessfuly given &e%tokens% &atokens to &e%player%."
+  admin_remove_tokens: "&aSuccessfuly removed &e%tokens% &atokens from &e%player%."
+  admin_set_blocks: "&aSuccessfuly set &e%blocks%'s &ablocks to &e%tokens%."
+  admin_give_blocks: "&aSuccessfuly given &e%blocks% &ablocks to &e%player%."
+  admin_remove_blocks: "&aSuccessfuly removed &e%blocks% &ablocks from &e%player%."
+  not_token_item: "&cThis is not a token item!"
+  tokens_redeem: "&e&l(!) &eYou redeemed &f%tokens% &etoken(s)"
+  tokens_send: "&eYou have sent %tokens% to %player%"
+  tokens_received: "&eYou received %tokens% from %player%."
+  tokens_received_console: "&e&lTOKENS &8» &7You have received &f%tokens% tokens&7."
+  not_a_number: "&c%input% is not a number!"
+  player_not_online: "&cPlayer &e%player% &cis not online!"
+  top_format_tokens: "&f&l#%position%. &e%player% &8» &7%amount% tokens"
+  top_format_blocks: "&f&l#%position%. &e%player% &8» &7%amount% blocks"
+  top_format_blocks_your: "&eYour Position &f#%position% &8» &7%blocks% blocks"
+  top_spacer_line: "&e&m-------&f&m-------&e&m--------&f&m--------&e&m--------&f&m-------&e&m-------"
+  top_spacer_line_bottom: "&e&m-------&f&m-------&e&m--------&f&m--------&e&m--------&f&m-------&e&m-------"
+  top_updating: "&c&lLeaderboard is currently updating..."
+  top_weekly_reset: "&7&oTime Left: %time%"
+  token_message_disabled: "&e&lTOKENS &8» &7Messages &c&lOFF"
+  token_message_enabled: "&e&lTOKENS &8» &7Messages &a&lON"
+  tokens_received_mining: "&e&lTOKENS &8» &7You found &6%amount% Tokens &7while mining"
+tokens:
+  breaking:
+    chance: 5.0
+    max: 5
+    min: 1
+  item:
+    material: SUNFLOWER
+    name: "&e&l%amount% TOKENS"
+    lore:
+      - "&7Right-Click to Redeem"
+next-reset-weekly: 0
+display-token-messages: true

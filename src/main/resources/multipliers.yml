@@ -1,0 +1,23 @@
+messages:
+  vote_multi: "&eVote Multiplier - %multiplier% &7(&a%duration%&7)"
+  rank_multi: "&eRank Multiplier - %multiplier% &7(&aPERMAMENT&7)"
+  global_multi: "&eGlobal Multiplier - %multiplier% &7(&a%duration%&7)"
+  personal_multi_apply: "&e&l(!) &7You've &a&lENABLED &7Sell Multiplier x %multiplier% for %minutes% minutes."
+  added_multi_sent: "&fYou have added %time% minutes of multiplier to %players%"
+  added_multi_received: "&fYou have received %time% minutes of multiplier"
+ranks:
+ #ultra: 1.0
+ #donor: 0.7
+ #vip: 0.5
+ #default: 0.1
+global-multiplier:
+  multiplier: 0.0
+  timeLeft: -1
+help-command:
+  - "&f[Mandatory], {Optional}, ~Alias~"
+  - "&f"
+  - "&f/globalmultiplier ~gmulti~ [time] [amount]"
+  - "&f/personalmultiplier ~pmulti~ [time] [amount]"
+  - "&f/multiplier ~multi~"
+  - "&f/pmultiaddtime ~pmat~ [player] [time]"
+  - "&f/multihelp ~mh~"

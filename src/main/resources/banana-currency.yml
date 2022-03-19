@@ -1,0 +1,40 @@
+item-texture: "http://textures.minecraft.net/texture/20aaa1425d2b99383697d57193f27d872442bcb995508f42d19de4af1f8612"
+item-name: "&eBanana"
+item-lore:
+  - "&fUCustom Currency"
+item-given: "&f%count% banana(s) has been given to %target%"
+item-received: "&fYou have received %count% bananas from %sender%"
+banana-armour-multi: 50.0
+banana-armour-effects:
+  - "SPEED 2"
+banana-armour-color:
+  red: 121
+  green: 23
+  blue: 255
+banana-helmet-name: "&eBanana Helmet"
+banana-helmet-lore:
+  - "&8Multiplier: &c%multi%%"
+banana-chestplate-name: "&eBanana Chestplate"
+banana-chestplate-lore:
+  - "&8Multiplier: &c%multi%%"
+banana-leggings-name: "&eBanana Leggings"
+banana-leggings-lore:
+  - "&8Multiplier: &c%multi%%"
+banana-boots-name: "&eBanana Boots"
+banana-boots-lore:
+  - "&8Multiplier: &c%multi%%"
+banana-armour-enchants:
+  - "PROTECTION_ENVIRONMENTAL 4"
+
+top-rank-helmet-name: "&bTop Rank Helmet"
+top-rank-helmet-enchants:
+  - "PROTECTION_ENVIRONMENTAL 4"
+top-rank-chestplate-name: "&bTop Rank Chestplate"
+top-rank-chestplate-enchants:
+  - "PROTECTION_ENVIRONMENTAL 4"
+top-rank-leggings-name: "&bTop Rank Leggings"
+top-rank-leggings-enchants:
+  - "PROTECTION_ENVIRONMENTAL 4"
+top-rank-boots-name: "&bTop Rank Boots"
+top-rank-boots-enchants:
+  - "PROTECTION_ENVIRONMENTAL 4"

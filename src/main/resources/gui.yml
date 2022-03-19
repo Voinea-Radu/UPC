@@ -1,0 +1,176 @@
+#  click-function
+# pet-function -> click-pet-function
+# chose-pet
+#
+#
+#   price-function
+# banana -> [price-] -> price, message-fail
+#
+#
+#
+
+pet-gui:
+  title: "&ePet Food"
+  fill:
+    material: "STAINED_GLASS_PANE"
+    data: 2
+  items:
+    - id: "BB"
+      position: 37
+      material: "COAL"
+      name: "Banana Bread"
+      lore:
+        - "&fYou have %count% Banana Bread"
+        - ""
+        - "&7Left-Click to use 1"
+        - "&7Shift + Left-Click to use 10"
+        - "&7Right-Click to use 1"
+        - "&7Shift + Right-Click to use 10"
+
+      click-function:
+        - "pet-function"
+      click-pet-function:
+        - "give-pet-xp-percent"
+      percent: 10
+
+      price-function: "banana"
+      price-price: 5
+      price-message-fail: "You do not have enough bananas"
+    - id: "BC"
+      position: 38
+      material: "IRON_INGOT"
+      name: "Banana Cookies"
+      lore:
+        - "&fYou have %count% Banana Cookies"
+        - ""
+        - "&7Left-Click to use 1"
+        - "&7Shift + Left-Click to use 10"
+        - "&7Right-Click to use 1"
+        - "&7Shift + Right-Click to use 10"
+
+      click-function:
+        - "pet-function"
+      click-pet-function:
+        - "give-pet-xp-percent"
+      percent: 25
+
+      price-function: "banana"
+      price-price: 12
+      price-message-fail: "You do not have enough bananas"
+    - id: "BSS"
+      position: 39
+      material: "REDSTONE"
+      name: "Banana Split Sundae"
+      lore:
+        - "&fYou have %count% Banana Split Sundae"
+        - ""
+        - "&7Left-Click to use 1"
+        - "&7Shift + Left-Click to use 10"
+        - "&7Right-Click to use 1"
+        - "&7Shift + Right-Click to use 10"
+
+      click-function:
+        - "pet-function"
+      click-pet-function:
+        - "give-pet-xp-percent"
+      percent: 50
+
+      price-function: "banana"
+      price-price: 20
+      price-message-fail: "You do not have enough bananas"
+
+    - id: "BFC"
+      position: 41
+      material: "GOLD_INGOT"
+      name: "Banana Flavored Coffee"
+      lore:
+        - "&fYou have %count% Banana Flavored Coffee"
+        - ""
+        - "&7Left-Click to use 1"
+        - "&7Shift + Left-Click to use 10"
+        - "&7Right-Click to use 1"
+        - "&7Shift + Right-Click to use 10"
+
+      click-function:
+        - "pet-function"
+      click-pet-function:
+        - "give-pet-xp-percent"
+        - "occurrence-multiplier"
+      percent: 5
+      multiplier: 1.1
+      duration: 600
+
+      price-function: "banana"
+      price-price: 7
+      price-message-fail: "You do not have enough bananas"
+    - id: "JJ"
+      position: 42
+      material: "DIAMOND"
+      name: "Jungle Juice"
+      lore:
+        - "&fYou have %count% Jungle Juice"
+        - ""
+        - "&7Left-Click to use 1"
+        - "&7Shift + Left-Click to use 10"
+        - "&7Right-Click to use 1"
+        - "&7Shift + Right-Click to use 10"
+
+      click-function:
+        - "pet-function"
+      click-pet-function:
+        - "give-pet-xp-percent"
+        - "occurrence-multiplier"
+      percent: 7
+      multiplier: 1.15
+      duration: 600
+
+      price-function: "banana"
+      price-price: 15
+      price-message-fail: "You do not have enough bananas"
+    - id: "SJJ"
+      position: 43
+      material: "EMERALD"
+      name: "Super Jungle Juice"
+      lore:
+        - "&fYou have %count% Super Jungle Juice"
+        - ""
+        - "&7Left-Click to use 1"
+        - "&7Shift + Left-Click to use 10"
+        - "&7Right-Click to use 1"
+        - "&7Shift + Right-Click to use 10"
+
+      click-function:
+        - "pet-function"
+      click-pet-function:
+        - "give-pet-xp-percent"
+        - "occurrence-multiplier"
+      percent: 10
+      multiplier: 1.25
+      duration: 600
+
+      price-function: "banana"
+      price-price: 30
+      price-message-fail: "You do not have enough bananas"
+
+    - id: "BOOK"
+      position: 22
+      material: "BOOK"
+      name: "Informations"
+      lore:
+        - "What goes here?"
+
+      click-function: []
+      price-function: ""
+    - id: "PET"
+      position: 13
+      material: "BARRIER"
+      name: "Please select a pet"
+      lore:
+        - "What goes here?"
+
+      click-function:
+        - "chose-pet"
+      price-function: ""
+
+
+

@@ -1,0 +1,341 @@
+# Pet functions types:
+# all of them need xp-gain
+# random-token -> min, max, message
+# random-money -> min, max, message
+# random-banana -> min, max, message
+# token-multiplier -> multiplier, duration,
+# spawn-golden-wool -> min, max, spawn-message, fail-message, found-message, someone-else
+# spawn-banana-tree -> min, max, spawn-message, fail-message, found-message, someone-else
+# spawn-slime-chest -> min, max, spawn-message, fail-message, found-message, someone-else
+# occurrence-multiplier -> multiplier, duration, message
+# give-black-market-voucher -> min, max, message
+# execute-commands -> commands, message
+# execute-random-command -> commands, message
+# give-keys-on-explosion -> radius, possible-commands, duration, occurrence, receive-message, explosion-message
+# replace-item -> itemstack-names-to-remove, command, message
+# give-autominer-or-voucher -> min, max, command, message-autominer, message-voucher
+# give-pet-xp-percent -> percent, message
+#
+
+
+occurrence-interval-check: 200 # in ticks
+
+# Pets config
+pets:
+  - id: "TP" # Do not modify
+    name: "&fToken Pet" # Pet name
+    material: "DIRT"
+    lore: # Pet lore
+      - "&bLevel %level%"
+      - "&f%progress% %progress_percent%"
+      - "&f(%xp%/%next_level_xp%)"
+      - "&fXP Needed: %xp_needed%"
+      - "&f"
+      - "&fLevel &61  &f-> Starter"
+      - "&fLevel &610 &f-> Boost"
+      - "&fLevel &620 &f-> Token Multiplier"
+      - "&fLevel &630 &f-> Master Token Tsunami"
+    occurrence: #?% of the event occurring once every occurrence-interval-check period
+      - 5.0
+      - 5.0
+      - 5.0
+      - 5.0
+
+    pet-functions:
+      - level: 1
+        xp-gain: 50
+        functions:
+          - "random-token"
+
+        min: 10
+        max: 1000
+        message: "&fYou have received a &6Starter pack &fworth %tokens% tokens from your level %level% Pet!"
+
+      - level: 10
+        xp-gain: 100
+        functions:
+          - "random-token"
+
+        min: 1000
+        max: 5000
+        message: "&fYou have received a &6Boost Pack &fworth %tokens% tokens from your level %level% pet!"
+
+      - level: 20
+        xp-gain: 200
+        functions:
+          - "token-multiplier"
+
+        multiplier: 1.5
+        duration: 60
+        message: "&fYou have received a &6Token Multiplier &fworth %multiplier% for %duration% seconds from your level %level% pet!"
+
+      - level: 30 # Give tokens
+        xp-gain: 500
+        functions:
+          - "random-token"
+
+        min: 10000
+        max: 50000
+        message: "&fYou have received a &6Master Token Tsunami &fworth %tokens% tokens from your level %level% pet!"
+
+
+  - id: "MP" # Do not modify
+    name: "&fMoney Pet" # Pet name
+    material: "STONE"
+    lore: # Pet lore
+      - "&bLevel %level%"
+      - "&f%progress% %progress_percent%"
+      - "&f(%xp%/%next_level_xp%)"
+      - "&fXP Needed: %xp_needed%"
+      - "&f"
+      - "&fLevel &61  &f-> Starter"
+      - "&fLevel &610 &f-> Boost"
+      - "&fLevel &620 &f-> Prosperous Discovery"
+      - "&fLevel &630 &f-> Master Pirate Profiteer"
+    occurrence: #?% of the event occurring once every occurrence-interval-check period
+      - 5.0
+      - 5.0
+      - 5.0
+      - 5.0
+
+    pet-functions: # Pet functions with their settings
+      - level: 1
+        xp-gain: 50
+        functions:
+          - "random-money"
+
+        min: 1000.0
+        max: 100000.0
+        message: "&fYou have received a &6Starter pack &fworth $%money% from your level %level% pet!"
+
+      - level: 10
+        xp-gain: 100
+        functions:
+          - "random-money"
+
+        min: 100000.0
+        max: 5000000.0
+        message: "&fYou have received a &6Boost Pack &fworth $%money% from your level %level% pet!"
+
+      - level: 20
+        xp-gain: 200
+        functions:
+          - "spawn-golden-wool"
+
+        min: 100000.0
+        max: 1000000.0
+        spawn-message: "Your level %level% pet spawned a &egolden wool &f in your current mine &fworth a sum of money. Find and break it to get the money!"
+        fail-message: "Your pet could not use its ability because you are not in a mine"
+        found-message: "&fYou found the &eGolden wool &fyou have received $%money%"
+        someone-else: "&fThis is not your wool. Yu can not take someone else's &egolen wool"
+
+      - level: 30
+        xp-gain: 500
+        functions:
+          - "occurrence-multiplier"
+        multiplier: 1.1
+        duration: 60 # in seconds
+        message: "&fYou have received a &6Master Pirate Profiteer &fwhich increases the occurrences of your pets abilities by %multiplier% for %duration%!"
+
+
+  - id: "BP" # Do not modify
+    name: "&fBanana Pet" # Pet name
+    material: "IRON_BLOCK"
+    lore: # Pet lore
+      - "&bLevel %level%"
+      - "&f%progress% %progress_percent%"
+      - "&f(%xp%/%next_level_xp%)"
+      - "&fXP Needed: %xp_needed%"
+      - "&f"
+      - "&fLevel &61  &f-> Starter"
+      - "&fLevel &610 &f-> Boost"
+      - "&fLevel &620 &f-> Banana Boss"
+      - "&fLevel &630 &f-> Master Discrete Acquaintance"
+    occurrence: #?% of the event occurring once every occurrence-interval-check period
+      - 5.0
+      - 5.0
+      - 5.0
+      - 5.0
+
+    pet-functions: # Pet functions with their settings
+      - level: 1
+        xp-gain: 50
+        functions:
+          - "random-banana"
+
+        min: 1
+        max: 2
+        message: "&fYou have received a &6Starter pack &fworth %banana% bananas from your level %level% pet!"
+
+      - level: 10
+        xp-gain: 100
+        functions:
+          - "random-banana"
+
+        min: 2
+        max: 4
+        xp-gain: 100
+        message: "&fYou have received a &6Starter pack &fworth %banana% bananas from your level %level% pet!"
+
+      - level: 20
+        xp-gain: 200
+        functions:
+          - "spawn-banana-tree"
+
+        min: 20
+        max: 100
+        spawn-message: "Your pet spawned a &eBanana Boss tree &fin your current mine worth bananas. Find and break it to get the bananas!"
+        fail-message: "Your pet could not use its ability because you are not in a mine"
+        found-message: "&fYou found the &eBanana Boss tree &fyou have received %bananas% bananas"
+        someone-else: "&fThis is not your wool. Yu can not take someone else's &eBanana Boss tree"
+
+      - level: 30
+        xp-gain: 500
+        functions: 
+          - "give-black-market-voucher"
+
+        min: 1
+        max: 50
+        message: "You have received a %percent%% discount voucher for Black Market from your level %level% pet!"
+
+
+  - id: "KP" # Do not modify
+    name: "&fKey Pet" # Pet name
+    material: "DIAMOND_BLOCK"
+    lore: # Pet lore
+      - "&bLevel %level%"
+      - "&f%progress% %progress_percent%"
+      - "&f(%xp%/%next_level_xp%)"
+      - "&fXP Needed: %xp_needed%"
+      - "&f"
+      - "&fLevel &61  &f-> Starter"
+      - "&fLevel &610 &f-> Boost"
+      - "&fLevel &620 &f-> Locksmith’s Detonation"
+      - "&fLevel &630 &f-> Master Locksmith’s Refinery"
+    occurrence: #?% of the event occurring once every occurrence-interval-check period
+      - 5.0
+      - 5.0
+      - 5.0
+      - 5.0
+
+    pet-functions: # Pet functions with their settings
+      - level: 1
+        xp-gain: 50
+        functions:
+          - "execute-commands"
+
+        commands:
+          - "say Here are the keys"
+          - "say Here are some more keys"
+        message: "&fYou have received a &6Starter pack &fworth a bunch of keys from your level %level% pet!"
+
+      - level: 10
+        xp-gain: 50
+        functions:
+          - "execute-commands"
+
+        commands:
+          - "say Here are the keys"
+          - "say Here are some more keys"
+        message: "&fYou have received a &6Boost &fworth a bunch of keys from your level %level% pet!"
+
+      - level: 20
+        xp-gain: 200
+        functions:
+          - "give-keys-on-explosion"
+
+        radius: 10
+        possible-commands:
+          - "say 1"
+          - "say 2"
+          - "say 3"
+          - "say 4"
+          - "say 5"
+        duration: 60 # in seconds
+        occurrence: 1.0
+        receive-message: "Your pet gave you a &eLocksmith’s Detonation &fwhich will give you random keys for every block your %occurrence%% explosion will break. Break blocks to have a change at causing an explosion for the next %duration%!"
+        explosion-message: "&fYou found a bunch of keys!" #pet placeholders are not available here
+
+      - level: 30
+        xp-gain: 200
+        functions:
+          - "replace-item"
+
+        itemstack-names-to-remove:
+          - "KEY 1"
+          - "KEY 2"
+          - "KEY 3"
+        command: "say Hello %count%"
+        message: "Your pet transformed %count% random keys in your inventory with %count% Banana keys"
+
+
+  - id: "VP" # Do not modify
+    name: "&fVoucher Pet" # Pet name
+    material: "EMERALD_BLOCK"
+    lore: # Pet lore
+      - "&bLevel %level%"
+      - "&f%progress% %progress_percent%"
+      - "&f(%xp%/%next_level_xp%)"
+      - "&fXP Needed: %xp_needed%"
+      - "&f"
+      - "&fLevel &61  &f-> Starter"
+      - "&fLevel &610 &f-> Boost"
+      - "&fLevel &620 &f-> Mystery Slime Box "
+      - "&fLevel &630 &f-> Master Mystery Slime Mutation"
+    occurrence: #?% of the event occurring once every occurrence-interval-check period
+      - 5.0 # this one is auto-handled to be incremented for each level of the pet
+      - 5.0
+      - 5.0
+      - 5.0
+
+    pet-functions: # Pet functions with their settings
+      - level: 1
+        xp-gain: 50
+        functions:
+          - "give-autominer-or-voucher"
+
+        min: 10
+        max: 30
+        voucher-command: "say Here is the voucher"
+        message-autominer: "&fYou have received a &6Starter pack &fworth %time% minutes of autominer from your level %level% pet!"
+        message-voucher: "&fYou have received a &6Starter pack &fworth a voucher from your level %level% pet!"
+
+      - level: 10 # Give autominer time
+        xp-gain: 50
+        functions:
+          - "give-autominer-or-voucher"
+
+        min: 30
+        max: 120
+        voucher-command: "say Here is the voucher"
+        message-autominer: "&fYou have received a &6Starter pack &fworth %time% minutes of autominer from your level %level% pet!"
+        message-voucher: "&fYou have received a &6Starter pack &fworth a voucher from your level %level% pet!"
+
+      - level: 20
+        xp-gain: 200
+        functions:
+          - "spawn-slime-chest"
+        command: "say Hello here are your vouchers"
+
+        spawn-message: "Your pet spawned a &eSlime Chest &fin your current mine worth some vouchers."
+        fail-message: "Your pet could not use its ability because you are not in a mine"
+        found-message: "&fYou found the &eSlime Chest tree &fyou have received"
+        someone-else: "&fThis is not slime chest. Yu can not take someone else's &eSlime chest tree"
+
+      - level: 30
+        xp-gain: 50
+        functions:
+          - "execute-random-commands"
+
+        commands:
+          - "say Key 1"
+          - "say Key 2"
+        message: "&fYou have received some keys from your level %level% pet!"
+
+
+
+
+
+
+
+
